@@ -1,10 +1,11 @@
+package basics
+
 import kotlinx.coroutines.*
 
 fun main() = runBlocking {
-    val job = GlobalScope.launch {
+    launch {
         delay(1000L)
         println("World!")
     }
     println("Hello, ")
-    job.join()
 }
